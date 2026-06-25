@@ -3,23 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Siddharth Chaturvedi — SkyRoads Research Portfolio</title>
-  <meta name="description" content="A SkyRoads-inspired personal research portfolio for projects, publications, talks, and essays." />
-  <meta name="theme-color" content="#080b2f" />
+  <title>Siddharth Chaturvedi — Scaling Complex Systems</title>
+  <meta name="description" content="A personal research portfolio with an interactive living-network background for scaling complex systems." />
+  <meta name="theme-color" content="#06101f" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <canvas id="skyroad-canvas" aria-hidden="true"></canvas>
-  <div class="scanlines" aria-hidden="true"></div>
-  <div class="grid-glow" aria-hidden="true"></div>
+  <canvas id="system-bg" aria-hidden="true"></canvas>
+  <div class="bg-overlay" aria-hidden="true"></div>
 
   <header class="site-header" aria-label="Site header">
     <a class="brand" href="#top" aria-label="Home">
-      <span class="brand-mark">SR</span>
-      <span class="brand-text">Sky Research</span>
+      <span class="brand-mark">∑</span>
+      <span class="brand-text">Scaling Systems</span>
     </a>
     <nav class="main-nav" aria-label="Primary navigation">
       <a href="#research">Research</a>
@@ -31,100 +30,116 @@
 
   <main id="main">
     <section id="top" class="hero section-panel">
-      <div class="hud-card hero-copy">
-        <p class="eyebrow">MS-DOS nostalgia × complex systems</p>
-        <h1>Building artificial worlds where agents learn to survive.</h1>
+      <div class="hero-copy glass-panel">
+        <p class="eyebrow">population-varying complex systems</p>
+        <h1>What changes when the number of entities changes?</h1>
         <p class="lead">
-          A SkyRoads-inspired portfolio for my work on agent-based simulation,
-          adaptive controllers, artificial life, and collective intelligence.
+          I study scaling in living and artificial systems: animals, cars, buildings, neurons,
+          and agents that are born, interact, adapt, and die.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#projects">Enter projects</a>
-          <a class="button ghost" href="#publications">View papers</a>
+          <a class="button primary" href="#projects">View projects</a>
+          <a class="button ghost" href="#research">Research map</a>
         </div>
       </div>
 
-      <aside class="cockpit" aria-label="Research HUD">
-        <div class="meter-row">
-          <span>speed</span>
-          <meter id="speed-meter" min="0" max="100" value="73">73%</meter>
+      <aside class="system-hud glass-panel" aria-label="Live background system information">
+        <div class="hud-title">live system</div>
+        <div class="metric-row">
+          <span>entities</span>
+          <strong id="entity-count">—</strong>
         </div>
-        <div class="meter-row">
-          <span>oxygen</span>
-          <meter id="oxygen-meter" min="0" max="100" value="92">92%</meter>
+        <div class="metric-row">
+          <span>links</span>
+          <strong id="link-count">—</strong>
         </div>
-        <div class="meter-row">
-          <span>fuel</span>
-          <meter id="fuel-meter" min="0" max="100" value="68">68%</meter>
+        <div class="metric-row">
+          <span>birth/death</span>
+          <strong id="turnover-rate">—</strong>
         </div>
-        <p class="tiny-note">Use ← → or move your mouse to steer the tiny ship.</p>
+        <p class="tiny-note">
+          Move your pointer to perturb the system. Click or tap to trigger a birth event.
+          Scroll to increase system scale.
+        </p>
       </aside>
     </section>
 
     <section id="research" class="section-panel split-section">
-      <div>
-        <p class="eyebrow">01 / research road</p>
-        <h2>From simple agents to adaptive worlds.</h2>
+      <div class="section-copy">
+        <p class="eyebrow">01 / research idea</p>
+        <h2>Systems are not only dynamic in state. They are dynamic in size.</h2>
+        <p>
+          Many models hold the number of entities fixed. But real systems constantly change their
+          population: neurons strengthen, weaken, appear, or die; animals enter and leave habitats;
+          vehicles appear and disappear from traffic; buildings emerge and decay in cities.
+        </p>
       </div>
-      <div class="roadmap">
-        <article class="road-tile tile-boost">
-          <span>Boost</span>
-          <h3>Fast simulations</h3>
-          <p>JAX-based agent worlds, vectorized rollouts, hardware acceleration, and ecological experiments.</p>
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span>birth</span>
+          <h3>New entities</h3>
+          <p>How does structure change when new agents, cells, vehicles, or buildings appear?</p>
         </article>
-        <article class="road-tile tile-supply">
-          <span>Supply</span>
-          <h3>Adaptive brains</h3>
-          <p>Continuous-time controllers, neural differential equations, online adaptation, and foraging behavior.</p>
+        <article class="concept-card">
+          <span>death</span>
+          <h3>Entity loss</h3>
+          <p>What remains stable when parts of the system disappear or stop participating?</p>
         </article>
-        <article class="road-tile tile-slippery">
-          <span>Slippery</span>
-          <h3>Collectives</h3>
-          <p>Many-agent systems, emergent coordination, common-pool dynamics, and artificial life.</p>
+        <article class="concept-card">
+          <span>scaling</span>
+          <h3>Changing size</h3>
+          <p>Which patterns survive when a system grows from a few entities to many?</p>
+        </article>
+        <article class="concept-card">
+          <span>rewiring</span>
+          <h3>Changing interactions</h3>
+          <p>How do local relations reorganize when the population itself is moving?</p>
         </article>
       </div>
     </section>
 
     <section id="projects" class="section-panel">
       <div class="section-heading">
-        <p class="eyebrow">02 / missions</p>
-        <h2>Selected projects</h2>
-        <p>Edit these cards in <code>index.html</code> and link each one to a repo, paper, or blog post.</p>
+        <p class="eyebrow">02 / projects</p>
+        <h2>Selected work</h2>
+        <p>Edit these cards in <code>index.html</code> and link each one to a repo, paper, tutorial, or blog post.</p>
       </div>
 
       <div class="project-grid">
         <article class="project-card">
           <div class="card-number">A1</div>
           <h3>Foragax</h3>
-          <p>Fast agent-based simulation framework for foragers, neurons, and ecological worlds.</p>
-          <a href="#" aria-label="Open Foragax project">Open mission →</a>
+          <p>Fast JAX-based agent simulation for foragers, neurons, and ecological worlds.</p>
+          <a href="#">Open project →</a>
         </article>
         <article class="project-card">
           <div class="card-number">B7</div>
           <h3>Many-agent foraging</h3>
-          <p>Population-level behavior from passive sensing, partial observability, and stochastic resources.</p>
-          <a href="#" aria-label="Open many-agent foraging project">Open mission →</a>
+          <p>Emergent collective behavior under partial observability, stochastic resources, and selection.</p>
+          <a href="#">Open project →</a>
         </article>
         <article class="project-card">
           <div class="card-number">C3</div>
           <h3>Adaptive neural dynamics</h3>
-          <p>Exploring continuous adaptation in artificial agents through neural differential equations.</p>
-          <a href="#" aria-label="Open adaptive neural dynamics project">Open mission →</a>
+          <p>Continuous-time controllers and online adaptation for artificial agents.</p>
+          <a href="#">Open project →</a>
         </article>
         <article class="project-card">
           <div class="card-number">D9</div>
-          <h3>GP for complex systems</h3>
-          <p>Tutorial materials on using genetic programming to design complex adaptive systems.</p>
-          <a href="#" aria-label="Open GP complex systems project">Open mission →</a>
+          <h3>Complex adaptive systems</h3>
+          <p>Tutorials and experiments on using genetic programming to design complex systems.</p>
+          <a href="#">Open project →</a>
         </article>
       </div>
     </section>
 
     <section id="publications" class="section-panel split-section">
-      <div>
-        <p class="eyebrow">03 / logs</p>
+      <div class="section-copy">
+        <p class="eyebrow">03 / outputs</p>
         <h2>Papers, talks, and essays</h2>
-        <p class="lead small-lead">Keep this section boring in the best way: clear links, dates, PDFs, and code.</p>
+        <p>
+          Keep this section intentionally clear: dates, links, PDFs, code, slides, and short summaries.
+        </p>
       </div>
       <div class="publication-list">
         <article>
@@ -145,10 +160,10 @@
       </div>
     </section>
 
-    <section id="contact" class="section-panel contact-panel">
-      <p class="eyebrow">04 / docking bay</p>
-      <h2>Let’s talk research, simulations, and artificial life.</h2>
-      <p>Replace these with your real links.</p>
+    <section id="contact" class="section-panel contact-panel glass-panel">
+      <p class="eyebrow">04 / contact</p>
+      <h2>Let’s talk simulations, artificial life, and complex systems.</h2>
+      <p>Replace these links with your real email, GitHub, Google Scholar, CV, or university page.</p>
       <div class="contact-links">
         <a href="mailto:your.email@example.com">Email</a>
         <a href="https://github.com/your-username">GitHub</a>
@@ -159,9 +174,9 @@
   </main>
 
   <footer class="site-footer">
-    <p>Built as a SkyRoads-inspired static site. No original game assets used.</p>
+    <p>Static GitHub Pages site. Background: generative population-changing network animation.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="network-bg.js"></script>
 </body>
 </html>
